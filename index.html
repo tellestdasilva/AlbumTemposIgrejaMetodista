@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igreja Metodista - Templos</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sound Control -->
+    <button id="sound-toggle" class="sound-btn" aria-label="Alternar som">
+        <svg class="sound-icon-on" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+                d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+        </svg>
+        <svg class="sound-icon-off hidden" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor"
+                d="M12,4L9.91,6.09L12,8.18M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.5C15.58,18 14.83,18.4 14,18.71V20.77C15.38,20.44 16.63,19.78 17.7,18.9L20.73,21.93L22,20.66L4.27,3M14,3.23V5.29C14.73,5.5 15.43,5.83 16.07,6.26L14.59,7.74C14.41,7.65 14.21,7.58 14,7.54V9.54L19,14.54C19,13.7 19,12.85 19,12C19,7.72 16,4.14 14,3.23M16.5,12C16.5,11.2 16.1,10.5 15.5,10.05L14,11.55V12.45L15.46,13.9C15.48,13.28 16.5,12.62 16.5,12Z" />
+        </svg>
+    </button>
+
+    <!-- Navigation Arrows -->
+    <button id="btn-prev" class="nav-btn nav-btn-left" aria-label="Página Anterior">
+        <svg viewBox="0 0 24 24" width="36" height="36">
+            <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+        </svg>
+    </button>
+    <button id="btn-next" class="nav-btn nav-btn-right" aria-label="Próxima Página">
+        <svg viewBox="0 0 24 24" width="36" height="36">
+            <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+        </svg>
+    </button>
+
+    <!-- Album Container -->
+    <div class="album-viewport" id="album-viewport">
+        <div class="flip-book" id="book">
+
+            <!-- PAGINA 0: CAPA -->
+            <div class="page page-cover" data-density="hard">
+                <div class="page-content cover-content">
+                    <div class="cover-header">
+                        <span class="cover-seal">COLEÇÃO OFICIAL</span>
+                    </div>
+                    <div class="cover-body">
+                        <h1 class="cover-title glitch" data-text="Igreja Metodista">Igreja Metodista</h1>
+                        <h2 class="cover-subtitle glitch" data-text="Templos">Templos</h2>
+                        <div class="cover-art">
+                            <!--div class="art-grid"></div-->
+
+                            <!-- Floating Mini Cards Silhouette Collage -->
+                            <!--div class="mini-card mc-turing">
+                                <div class="mc-avatar">AI</div>
+                                <span class="mc-num">#01</span>
+                            </div>
+                            <div class="mini-card mc-guido">
+                                <div class="mc-avatar">PY</div>
+                                <span class="mc-num">#06</span>
+                            </div>
+                            <div class="mini-card mc-jobs">
+                                <div class="mc-avatar">OS</div>
+                                <span class="mc-num">#20</span>
+                            </div-->
+
+                            <!-- Central Glowing 3D Tech Sphere -->
+                            <!--div class="tech-sphere">
+                                <div class="sphere-core">
+                                    <svg class="art-logo" viewBox="0 0 24 24">
+                                        <path d="M12 2L2 22h20L12 2zm0 4l6.5 13h-13L12 6z" />
+                                    </svg>
+                                </div>
+                                < div class="sphere-ring ring-1"></div>
+                                < div class="sphere-ring ring-2"></div>
+                            </div-->
+                        </div>
+                        <p class="cover-footer-text">SELEÇÃO DE TEMPLOS</p>
+                    </div>
+                    <div class="cover-footer">
+                        <span>JULHO 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PAGINA 1: JF Zona Sul -->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-ia">Juiz de Fora</span>
+                        <h3 class="page-title">Zona Sul</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#01</div>
+                            <div class="slot-name">Igreja Metodista Jardinópolis</div>
+                            <div class="slot-role">Rua Três Ilhas, 96. Santa Luzia</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#02</div>
+                            <div class="slot-name">Congregação do Jardim de Alá</div>
+                            <div class="slot-role">Rua Elvira Belei, 455. Jardim de Alá</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#03</div>
+                            <div class="slot-name">Igreja Metodista Bela Aurora</div>
+                            <div class="slot-role">Rua Doutor Costa Reis, 380. Bela Aurora</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#04</div>
+                            <div class="slot-name"> </div>
+                            <div class="slot-role"> </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#05</div>
+                            <div class="slot-name"> </div>
+                            <div class="slot-role"> </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 1</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 2: JF Zona Oeste -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-python">Juiz de Fora</span>
+                        <h3 class="page-title">Zona Oeste</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#06</div>
+                            <div class="slot-name">Igreja Metodista Peniel</div>
+                            <div class="slot-role">Rua Cruzador Bahia, 269. Dom Bosco </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#07</div>
+                            <div class="slot-name">Igreja Metodista Itatiaia </div>
+                            <div class="slot-role">Rua Antônio Rufino, 85. São Pedro </div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#08</div>
+                            <div class="slot-name"> Congregação Metodista Borboleta </div>
+                            <div class="slot-role"> Rua São Cosme, 245. Borboleta</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#09</div>
+                            <div class="slot-name"> </div>
+                            <div class="slot-role"> </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#10</div>
+                            <div class="slot-name"> </div>
+                            <div class="slot-role"> </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 2</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 3: JF Centro e Centro-Oeste-->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-db">Juiz de Fora</span>
+                        <h3 class="page-title">Centro e Centro-Oeste</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#11</div>
+                            <div class="slot-name">Igreja Metodista São Mateus</div>
+                            <div class="slot-role">Av. Independência (atualmente Presidente Itamar Franco), 1757. São Mateus</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#12</div>
+                            <div class="slot-name"> Campo Missionário Distrital Granbery </div>
+                            <div class="slot-role"> Rua Barão de Santa Helena, 300. Centro </div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#13</div>
+                            <div class="slot-name">Igreja Metodista Central </div>
+                            <div class="slot-role"> Rua Marechal Deodoro, 700. Centro</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#14</div>
+                            <div class="slot-name"> Igreja Metodista Monte Castelo </div>
+                            <div class="slot-role"> Rua dos Palmares, 78. Monte Castelo </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#15</div>
+                            <div class="slot-name">  </div>
+                            <div class="slot-role"> </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 3</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 4: JF Sudeste e Leste-->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-os">Juiz de Fora</span>
+                        <h3 class="page-title">Zonas Sudeste e Leste</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#16</div>
+                            <div class="slot-name">Igreja Metodista Vitória dos Fiéis</div>
+                            <div class="slot-role">Rua Inácio da Gama, 667. Lourdes</div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#17</div>
+                            <div class="slot-name">Congregação Vitorino Braga </div>
+                            <div class="slot-role">Rua Henrique Vaz, 569. Ladeira</div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#18</div>
+                            <div class="slot-name"> Igreja Metodista São Benedito</div>
+                            <div class="slot-role">Avenida Gilberto Costa, 760. São Benedito </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#19</div>
+                            <div class="slot-name"> Congregação Metodista de Linhares </div>
+                            <div class="slot-role"> Rua Diva Garcia, 1715. Linhares </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#20</div>
+                            <div class="slot-name">Igreja Metodista Betel</div>
+                            <div class="slot-role">Rua Carmela Dutra, 1715. Nossa Sra. Aparecida </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 4</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 5: JF Zona Nordeste e Norte-->
+            <div class="page page-left">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-brasil">Juiz de Fora</span>
+                        <h3 class="page-title">Zona Nordeste e Norte</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#21</div>
+                            <div class="slot-name"> Igreja Metodista Eldorado </div>
+                            <div class="slot-role"> Rua Luiz Rocha, 651. Eldorado </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#22</div>
+                            <div class="slot-name"> Igreja Metodista Benfica </div>
+                            <div class="slot-role"> Av. Juscelino Kubitschek, 6229. Benfica </div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#23</div>
+                            <div class="slot-name">  </div>
+                            <div class="slot-role">  </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#24</div>
+                            <div class="slot-name">  </div>
+                            <div class="slot-role">  </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#25</div>
+                            <div class="slot-name">  </div>
+                            <div class="slot-role">  </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 5</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 6: JF Outras Cidades da 4a. Região-->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-brasil"> 4a. Região </span>
+                        <h3 class="page-title">Outras Cidades  </h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#26</div>
+                            <div class="slot-name">Igreja Metodista Goianá</div>
+                            <div class="slot-role"> Rua 21 de Dezembro, 872. Centro. Goianá </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#27</div>
+                            <div class="slot-name">Congregação Metodista Piraúba</div>
+                            <div class="slot-role"> Rua Projetada, s/n. Boa Vista. Piraúba </div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#28</div>
+                            <div class="slot-name"> Igreja Metodista Central </div>
+                            <div class="slot-role"> Rua Manoel Lobato, 88. Centro. Leopoldina </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#29</div>
+                            <div class="slot-name"> Igreja Metodista Central </div>
+                            <div class="slot-role"> Rua Pedro de Oliveira, 381. Centro. Carangola  </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#30</div>
+                            <div class="slot-name"> Igreja Metodista Barbacena </div>
+                            <div class="slot-role"> Av. Bias Fortes, 575. Centro. Barbacena </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 6</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 7: Outras Cidades da 4a. REgião  -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-brasil"> 4a. Região </span>
+                        <h3 class="page-title"> Outras Cidades </h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#31</div>
+                            <div class="slot-name">Igreja Metodista em Ouro Branco</div>
+                            <div class="slot-role"> Rua Dedine, 481. Siderurgia. Ouro Branco </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#32</div>
+                            <div class="slot-name">Igreja Metodista Conselheiro Lafaiete</div>
+                            <div class="slot-role"> Rua Cel. Albino, 125. Centro. Conselheiro Lafaiete </div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#33</div>
+                            <div class="slot-name"> Igreja Central de Belo Horizonte </div>
+                            <div class="slot-role"> Rua Tupis, 51. Centro. Belo Horizonte </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#34</div>
+                            <div class="slot-name"> Igreja Metodista do Barreiro </div>
+                            <div class="slot-role">Rua Gilmar Pereira Rosa, 12. Cardoso. Belo Horizonte </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#35</div>
+                            <div class="slot-name">  </div>
+                            <div class="slot-role">  </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 7</div>
+                </div>
+            </div>            
+
+            <!-- PAGINA 8: Outras Regiões -->
+            <div class="page page-right">
+                <div class="page-content">
+                    <div class="page-header">
+                        <span class="tech-badge badge-brasil">Outras Regiões Eclesiásticas</span>
+                        <h3 class="page-title"> Rio de Janeiro e São Paulo</h3>
+                    </div>
+                    <div class="stickers-grid">
+                        <div class="sticker-slot">
+                            <div class="slot-number">#36</div>
+                            <div class="slot-name"> Igreja Metodista em Tijuca</div>
+                            <div class="slot-role"> Rua Engenheiro Adel, 25. Tijuca. Rio de Janeiro </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#37</div>
+                            <div class="slot-name">Catedral Metodista do Rio de Janeiro </div>
+                            <div class="slot-role"> Praça José de Alencar, 4. Flamengo. Rio de Janeiro </div>
+                        </div>
+                        <div class="sticker-slot special-slot">
+                            <div class="slot-number">#38</div>
+                            <div class="slot-name">Catedral Metodista de Petrópolis  </div>
+                            <div class="slot-role"> Rua Marechal Deodoro, 80. Centro. Petrópolis </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#39</div>
+                            <div class="slot-name">Igreja Metodista em Morro Grande  </div>
+                            <div class="slot-role">Rua Joaquim Ribeiro, 349. Sítio Morro Grande. São Paulo </div>
+                        </div>
+                        <div class="sticker-slot">
+                            <div class="slot-number">#40</div>
+                            <div class="slot-name">  </div>
+                            <div class="slot-role">  </div>
+                        </div>
+                    </div>
+                    <div class="page-footer">Pág. 8</div>
+                </div>
+            </div>
+
+            <!-- PAGINA 9: CONTRACAPA -->
+            <div class="page page-cover-back" data-density="hard">
+                <div class="page-content cover-back-content">
+                    <div class="cover-back-header">
+                        <h2>Igreja Metodista</h2>
+                    </div>
+                    <div class="cover-back-body">
+                        <div class="tech-logo-collage">
+                            <span>Juiz de Fora</span> • <span>Ouro Branco</span> • <span> 4a. Região Eclesiástica</span>
+                        </div>
+                        <p class="summary-text">
+                            Este Álbum é um reconhecimento à História do Metodismo no Brasil.
+                        </p>
+                        <div class="barcode-container">
+                            <div class="barcode">
+                                <!-- Simulated barcode lines -->
+                                <div class="bar"></div>
+                                <div class="bar thin"></div>
+                                <div class="bar"></div>
+                                <div class="bar thick"></div>
+                                <div class="bar thin"></div>
+                                <div class="bar"></div>
+                                <div class="bar thick"></div>
+                                <div class="bar"></div>
+                                <div class="bar thin"></div>
+                                <div class="bar thick"></div>
+                            </div>
+                            <span class="barcode-number">9 788575 228494</span>
+                        </div>
+                    </div>
+                    <div class="cover-back-footer">
+                        <span>Julho • 2026</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Page Flip Library -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+    <!-- Logic -->
+    <script src="app.js"></script>
+</body>
+
+</html>
